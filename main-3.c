@@ -13,7 +13,7 @@
 
 
 
-double func(double x) {                                                     //double gewählt zwecks Genauigkeit
+double func(double x) {                                                     //double gewï¿½hlt zwecks Genauigkeit
                                                                             //Werte in Funktion eingesetzt
     int a = 2;
     int b = -6;
@@ -22,7 +22,7 @@ double func(double x) {                                                     //do
     return (pow(x, a) + b * x + c);
 }
 
-double der(double x) {                                                      //double gewählt zwecks genauigkeit
+double der(double x) {                                                      //double gewï¿½hlt zwecks genauigkeit
                                                                             //Werte in Ableitung eingesetzt
 
     int a = 2;
@@ -35,7 +35,7 @@ double der(double x) {                                                      //do
 
 int main() {
 
-    int a = 2;
+    int a = 2; 
     int b = -6;
     int c = 9;
 
@@ -58,7 +58,7 @@ int main() {
     printf("Geben Sie die Anzahl der Wiederholungen an ( < 20) \n");
     scanf("%d", &max_wiederholungen);
     if (max_wiederholungen >= 20) {
-        printf("Eingabe war höher als 20.\nErneute Eingabe (unter 20): ");
+        printf("Eingabe war hï¿½her als 20.\nErneute Eingabe (unter 20): ");
         scanf("%d", &max_wiederholungen);
         if (max_wiederholungen >= 20);
         printf("Eingabe war wieder >= 20. Wird nun beendet.\n");
@@ -82,18 +82,18 @@ int main() {
         }
     }
 
-    if (fabs(values[max_wiederholungen] - values[max_wiederholungen - 1]) <= tol) { //wie präzise arbeitet das Programm
+    if (fabs(values[max_wiederholungen] - values[max_wiederholungen - 1]) <= tol) { //wie prï¿½zise arbeitet das Programm
         printf("Das Ergebnis nach der %d - ten Wiederholung, ist: %.10f.\n", max_wiederholungen, x1);
         printf("%d -te Wiederholung ist: %.8f\n", max_wiederholungen, values[max_wiederholungen]);
         printf("%d -te Wiederholung ist: %.8f\n", max_wiederholungen - 1, values[max_wiederholungen - 1]);
-        printf("Der mögliche Fehler in der Schätzung liegt bei %.8f\n", fabs(values[max_wiederholungen] - values[max_wiederholungen - 1]));
+        printf("Der mï¿½gliche Fehler in der Schï¿½tzung liegt bei %.8f\n", fabs(values[max_wiederholungen] - values[max_wiederholungen - 1]));
         printf("wo unsere Toleranz bei %.8f liegt", tol);
     }
     else {
 
         printf("%d -te Wiederholung ist: %.8f\n", max_wiederholungen, values[max_wiederholungen]);
         printf("%d -te Wiederholung ist: %.8f\n", max_wiederholungen - 1, values[max_wiederholungen - 1]);
-        printf("Der mögliche Fehler in der Schätzung beträgt:  %.8f\n", fabs(values[max_wiederholungen] - values[max_wiederholungen - 1]));
+        printf("Der mï¿½gliche Fehler in der Schï¿½tzung betrï¿½gt:  %.8f\n", fabs(values[max_wiederholungen] - values[max_wiederholungen - 1]));
         printf("unsere Toleranz liegt bei %.8f ", tol);
     }
 
@@ -102,3 +102,13 @@ int main() {
 
     return (0);
 }
+
+/*
+JW-2020-05-12:
+--------------
+> very good implementation!! (9/10) 
+> missing extra lib (*.c + *.h) incl. includegard includeguards: -1 Pkt
+> a,b,c in main are unused
+> Please check row 63. If-statement has empty body. Program returns immediately if user enters value > 20. Even if second input is < 20 
+*/
+
