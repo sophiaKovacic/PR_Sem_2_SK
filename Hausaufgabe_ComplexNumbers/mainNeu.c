@@ -9,7 +9,7 @@
 #include <math.h>
 #include <string.h>
 #include "fcn.h"
-#pragma warning(disable:4996)
+#pragma warning(disable:4996) // JW 2020-05-20: dont u use gnu's gcc compiler? 
 #include<complex.h>
 
 
@@ -40,7 +40,7 @@ int main() {
 
 
     printf("Geben Sie die erste komplexe Zahl in kartesischer Form an: \n");
-    scanf("%s", &zahl1);
+    scanf("%s", &zahl1); // JW 2020-05-20: this is technically wrong but will be handled by the compiler. please use >&zahl[0]< or >zahl< same in line 46: -1Pkt
 
     printf("Geben Sie die zweite komplexe Zahl in kartesischer Form an: \n");
     scanf("%s", &zahl2);
@@ -80,7 +80,7 @@ int main() {
 
     while (1)
     {
-        printf("Folgende Möglichkeiten stehen zur Verfügung:\n");
+        printf("Folgende Mï¿½glichkeiten stehen zur Verfï¿½gung:\n");
         printf("1: Addieren zweier komplexer Zahlen.\n");
         printf("2: Subtrahieren zweier komplexer Zahlen.\n");
         printf("3: Multiplizieren zweier komplexer Zahlen.\n");
@@ -124,11 +124,19 @@ int main() {
 
         }
         else {
-            printf("ungültige Eingabe! Wollen Sie es nochmals versuchen, so drücken Sie eine Taste.");
+            printf("ungï¿½ltige Eingabe! Wollen Sie es nochmals versuchen, so drï¿½cken Sie eine Taste.");
             
         }
 
-            return 0;
+            return 0; // nice exit implementation
         
     }
 }
+/*
+JW-2020-05-20:
+--------------
+> well done! (8/10) 
+> scanf char array line 43&46: -1Pkt
+> why sub and mul fcn not in lib? as well as definition of struct -2Pkt
+> implementation of exit function: +1Pkt
+*/
