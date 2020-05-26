@@ -153,13 +153,13 @@ void saveList(listElement* start) {
 
     if (fPtr == NULL) {
 
-        printf("\nCould not open dim file.\n");
+        printf("\nCould not open file.\n");
 
     }
 
     else {
 
-        printf("\nOpening file was successful.\n");
+        printf("Opening file was successful.\n");
 
     }
 
@@ -176,7 +176,7 @@ void saveList(listElement* start) {
     fprintf(fPtr, "%d\n", length);
 
 
-    if (start->nextElem == NULL) printf("list ist empty\n\n\n");
+    if (start->nextElem == NULL) printf("list ist empty\n\n");
     else {
         int i = 0;
         listElement* currElem = start;
