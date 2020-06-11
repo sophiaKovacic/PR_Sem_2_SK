@@ -13,26 +13,16 @@
 
 * NAME: HA05_main.c (main)
 
-*
+** AUTHOR: jannik wiessler
 
-* AUTHOR: jannik wiessler
+** DATE: 2020-06-06
 
-*
-
-* DATE: 2020-06-06
+** DESCRIPTION:  Implementation of a simple explicit euler method.
 
 *
-
-* DESCRIPTION:  Implementation of a simple explicit euler method.
-
-*
-
-*
-
 * DEPENDENCIES:
 
 *   >> HA05_rhsLib.c
-
 *   >> HA05_rhsLib.h
 
 *
@@ -40,7 +30,6 @@
 * INFO: For DHBW use only.
 
 *   >> Modelling of spring damper system
-
 *   >> Simulation with simple euler foreward method
 
 
@@ -65,11 +54,9 @@ int main() {
     FILE* fp;
 
     fp = fopen("results.txt", "w");
-
     if (fp == NULL) {
 
         printf("Datei konnte NICHT geoeffnet werden.\n");
-
         return -1;
 
     }
@@ -77,15 +64,12 @@ int main() {
 
 
     double rhs[NUMOFSTATES]; // create rhs
-
     double y_old[NUMOFSTATES]; // state vector
-
     double y_new[NUMOFSTATES]; // state vector
 
 
 
     double h = 2e-2; // stepsize for integrator
-
     double simTime = 12; // time of simulation in seconds
 
 
@@ -95,9 +79,7 @@ int main() {
     for (int i = 0; i < NUMOFSTATES; i++) {
 
         rhs[i] = 0;
-
         y_old[i] = 0;
-
         y_new[i] = 0;
 
     }
@@ -107,7 +89,6 @@ int main() {
     // init x and v //
 
     y_old[0] = 1; // location 
-
     y_old[1] = 0; // speed
 
 
@@ -142,9 +123,7 @@ int main() {
     fclose(fp);
 
     printf("finished...\n");
-
     FILE* gnuplotPipe = popen("gnuplot -persistent", "w");
-
     for (int i = 0; i < NUMOFCOMMANDS; i++) fprintf(gnuplotPipe, "%s \n", commandsForGnuplot[i]); //Send commands to gnuplot one by one.
 
 
