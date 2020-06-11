@@ -1,0 +1,10 @@
+3
+0.)	last Name: dsadsa
+	first Name: dsaasdsaf
+	age : 10
+1.)	last Name: dfadadaew
+	first Name: fdasva
+	age : 10
+2.)	last Name: fafdeac
+	first Name: fada
+	age : 5

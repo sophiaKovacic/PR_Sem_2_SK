@@ -2,7 +2,7 @@
 
 NAME:           Sophia Kovacic
 DATUM:          26.05.2020
-AUFGABE         Ergänzen .c file
+AUFGABE         Ergï¿½nzen .c file
 
 */
 
@@ -20,7 +20,7 @@ AUFGABE         Ergänzen .c file
 #include <time.h>
 #include "HA03_linkedListLib.h"
 
-void delay(int milliseconds){
+void delay(int milliseconds){ // JW 2020-05-27: what is this for ? function is unused in the following code.
 
     long pause;
     clock_t now, then;
@@ -251,7 +251,7 @@ void loadList(listElement* start) {
       fscanf(fPtr, "\tlast Name: %s\n", currElem->lastName);
       fscanf(fPtr, "\tfirst Name: %s\n", currElem->firstName);
       fscanf(fPtr, "\tage : %d\n", &currElem->age);
-      printf("\n(%d)\n\t Last name: %s\\First name: %s\n\t Age: %d\n\n", i, currElem->lastName, currElem-> age);
+      printf("\n(%d)\n\t Last name: %s\\First name: %s\n\t Age: %d\n\n", i, currElem->lastName, currElem->age); // JW 2020-05-27: missing last argument of type int
 
       } while (currElem->nextElem != NULL);
 
@@ -288,3 +288,9 @@ void stringToLower(char* string) {
 
     printf("\n>>stringToLower fcn is tbd.\n\n");
 }
+/*
+JW-2020-05-27:
+--------------
+> well done (7/10) 
+> Segmentation fault: 11 on loading list. think this is a format problem. please show homework in class. : -3Pkt
+*/
