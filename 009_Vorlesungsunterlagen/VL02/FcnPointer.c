@@ -1,41 +1,45 @@
 #include <stdio.h>
-/*******************************************************
-* NAME: Structs (main) 
-*
-* AUTHOR: jannik wiessler
-*
-* DATE: 2020-05-14
-*
-* DESCRIPTION: Einführendes Vorlesungsbeispiel zu Funktionspointern
-*
-* DEPENDENCIES: 
-*
-* INFO: For DHBW use only.
-*
-**/
-double myFcn(double x){
-
-    return x*x;
-}
+#include <stdlib.h>
+#include <string.h>
+#include "HA04_linkedListLib.h"
 
 
 int main(){
 
-    double value = 5;
-    double res = 0;
+    listElement *start;
+    start = (listElement *)malloc(sizeof(listElement));
+    if (start == NULL) {
+        printf("can't reserve storage.\n");
+        return -1;
+        }
+    start->nextElem = NULL;
 
-    // fcn fpointer
-    double (*myFcnPtr) (double);
-    myFcnPtr = myFcn;
+    int FLAGG = 1;
+    while (FLAGG){
+    
+        printf("1... print list\n");
+        printf("2... add element\n");
+        printf("3... delete element\n");
+        printf("4... delete list\n");
+        printf("5... save list\n");
+        printf("6... load list\n");
+        printf("7... sort list\n");
+        printf("0... quit\n");
+        scanf("%d",&FLAGG);
+        system("cls"); // cls for windows
 
-    // with fcn
-    res = myFcn(value);
-    printf("myFcn(%lf) = %lf\n",value,res);
 
-    // with pointer
-    res = myFcnPtr(value);
-    printf("myFcnPtr(%lf) = %lf\n",value,res);
-
-
+        switch (FLAGG){
+            case 1: printList(start); break;
+            case 2: addListElem(start); break;
+            case 3: delListElem(start); break;
+            case 4: delList(start); break;
+            case 5: saveList(start); break;
+            case 6: loadList(start); break;
+            case 7: sortList(start); break;
+            case 0: FLAGG = 0; exitFcn(start); break;
+            default: printf("invalid choice\n"); break;
+        }
+    }
     return 0;
 }
