@@ -18,8 +18,8 @@ void RHS_MSD(double* rhs, double* y) {
 
 
 
-    rhs[0] = y_dot
-    rhs[1] = x_dot
+    rhs[0] = y_dot; // JW 2020-06-12: missing semicolon in line 21 & 22: -1Pkt
+    rhs[1] = x_dot;
 
 }
 

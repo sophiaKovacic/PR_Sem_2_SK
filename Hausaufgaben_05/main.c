@@ -131,3 +131,10 @@ int main() {
     return 0;
 
 }
+/*
+JW-2020-06-12:
+--------------
+> well done (8/10) !
+> missing semicolon HA05_rhsLic.c
+> damper constant to get "aperiodischer Grenzfall?" --> d = 4: -1Pkt 
+*/
